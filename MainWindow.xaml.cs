@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,11 @@ using System.Windows.Shapes;
 
 namespace TestAction
 {
+    class A
+    {
+        public int MyProperty { get; set; }
+    }
+
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
@@ -23,6 +29,12 @@ namespace TestAction
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            A a = new A() { MyProperty = 32 };
+            string jsonMeta = JsonConvert.SerializeObject(a);
         }
     }
 }
