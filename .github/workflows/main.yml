@@ -53,6 +53,4 @@ jobs:
         uses: actions/upload-artifact@v2.1.4
         with:
           name: artifact_$env:Configuration
-          path: bin/${{ env:Configuration }}
-        env:
-          Configuration: ${{ matrix.configuration }}
+          path: bin/${{ matrix.Configuration }}
