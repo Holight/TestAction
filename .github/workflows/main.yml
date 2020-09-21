@@ -73,7 +73,6 @@ jobs:
           release_name: Release ${{ github.ref }}
           body: |
             Changes in this Release
-            - First Change
-            - Second Change
+            - ${{ github.sha }}
           draft: false
           prerelease: false
