@@ -78,7 +78,7 @@ jobs:
       - name: Zip file
         run: |
           mkdir delivery
-          cp artifact/TestAction delivery
+          cp artifact/TestAction.exe delivery
           cd delivery
           zip release ./*
           
