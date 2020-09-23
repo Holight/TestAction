@@ -61,7 +61,7 @@ jobs:
   release:
     if: ${{ startsWith(github.ref, 'refs/tags') }}
     
-    runs-on: windows-latest
+    runs-on: ubuntu-20.04
     
     steps:
       - name: Create a Release
