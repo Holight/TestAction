@@ -55,7 +55,7 @@ jobs:
         uses: actions/upload-artifact@v2
         if: ${{ matrix.configuration == 'Release' }} 
         with:
-          name: artifact_${{ matrix.configuration }}
+          name: artifact
           path: bin/${{ matrix.configuration }}
 
   release:
