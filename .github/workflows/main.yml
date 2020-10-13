@@ -118,5 +118,5 @@ jobs:
       - name: Get the version
         id: get_version
         run: |
-          set version=%GITHUB_REF:*tags/=%
-          echo ::set-output name=version::%version%
+          $version = $GITHUB_REF.replace("refs/tags/v", "")
+          echo ::set-output name=version::$version
