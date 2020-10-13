@@ -119,4 +119,5 @@ jobs:
         id: get_version
         run: |
           $version = $GITHUB_REF.replace("refs/tags/v", "")
+          $version
           echo ::set-output name=version::$version
